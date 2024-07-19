@@ -34,7 +34,7 @@ public class RBTConfigFeatures {
             BlockStateProvider.simple(Blocks.BIRCH_LEAVES),
             new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 2),
             new TwoLayersFeatureSize(1, 1, 2)).decorators(ImmutableList.of(
-            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
+            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.CLAY)))).build());
     public static final Holder<PlacedFeature> MEGA_BIRCH_CHECKED =
             PlacementUtils.register("mega_birch_checked",
             MEGA_BIRCH, PlacementUtils.filteredByBlockSurvival(Blocks.BIRCH_SAPLING));
@@ -51,7 +51,7 @@ public class RBTConfigFeatures {
             BlockStateProvider.simple(Blocks.OAK_LEAVES),
             new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
             new TwoLayersFeatureSize(1, 1, 2)).decorators(ImmutableList.of(
-            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
+            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.MOSS_BLOCK)))).build());
     public static final Holder<PlacedFeature> MEGA_OAK_CHECKED =
             PlacementUtils.register("mega_oak_checked",
                     MEGA_OAK, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING));
@@ -67,7 +67,7 @@ public class RBTConfigFeatures {
             BlockStateProvider.simple(Blocks.ACACIA_LEAVES),
             new MegaJungleFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
             new TwoLayersFeatureSize(1, 1, 2)).decorators(ImmutableList.of(
-            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
+            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.COARSE_DIRT)))).build());
     public static final Holder<PlacedFeature> MEGA_ACACIA_CHECKED =
             PlacementUtils.register("mega_acacia_checked",
                     MEGA_ACACIA, PlacementUtils.filteredByBlockSurvival(Blocks.ACACIA_SAPLING));

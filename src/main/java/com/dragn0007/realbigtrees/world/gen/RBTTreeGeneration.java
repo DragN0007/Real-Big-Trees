@@ -21,21 +21,21 @@ public class RBTTreeGeneration {
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
 
-        if (types.contains(BiomeDictionary.Type.RARE) && (types.contains(BiomeDictionary.Type.FOREST))) {
+        if (types.contains(BiomeDictionary.Type.SPARSE) && (types.contains(BiomeDictionary.Type.FOREST))) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(RBTPlacedFeatures.MEGA_BIRCH_PLACED);
         }
 
-        if (types.contains(BiomeDictionary.Type.RARE) && (types.contains(BiomeDictionary.Type.FOREST) || (types.contains(BiomeDictionary.Type.RARE) && (types.contains(BiomeDictionary.Type.PLAINS))))) {
+        if (types.contains(BiomeDictionary.Type.SPARSE) && (types.contains(BiomeDictionary.Type.FOREST) || (types.contains(BiomeDictionary.Type.RARE) && (types.contains(BiomeDictionary.Type.PLAINS))))) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(RBTPlacedFeatures.MEGA_OAK_PLACED);
         }
 
-        if (types.contains(BiomeDictionary.Type.RARE) && (types.contains(BiomeDictionary.Type.SAVANNA))) {
+        if (types.contains(BiomeDictionary.Type.SPARSE) && (types.contains(BiomeDictionary.Type.SAVANNA))) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
