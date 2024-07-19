@@ -13,7 +13,7 @@ public class MegaOakTreeGrower extends AbstractMegaTreeGrower {
     @Nullable
     @Override
     protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredMegaFeature(Random random) {
-        return RBTConfigFeatures.MEGA_BIRCH;
+        return RBTConfigFeatures.MEGA_OAK;
     }
 
     @Nullable

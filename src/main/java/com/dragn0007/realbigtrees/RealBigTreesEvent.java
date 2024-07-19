@@ -10,10 +10,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = RealBigTrees.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public class RealBigTreesEvent {
-
     @SubscribeEvent
     public static void clientSetupEvent(FMLClientSetupEvent event) {
         ItemBlockRenderTypes.setRenderLayer(RBTBlocks.MEGA_BIRCH_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RBTBlocks.MEGA_OAK_SAPLING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(RBTBlocks.MEGA_ACACIA_SAPLING.get(), RenderType.cutout());
     }
 }
 

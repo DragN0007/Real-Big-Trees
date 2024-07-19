@@ -8,9 +8,18 @@ import static net.minecraft.data.worldgen.placement.VegetationPlacements.treePla
 
 public class RBTPlacedFeatures {
 
-    //TREES
     public static final Holder<PlacedFeature> MEGA_BIRCH_PLACED =
             PlacementUtils.register("mega_birch_placed",
                     RBTConfigFeatures.MEGA_BIRCH_SPAWN,
+                    treePlacement(PlacementUtils.countExtra(0, 0.01F, 1)));
+
+    public static final Holder<PlacedFeature> MEGA_OAK_PLACED =
+            PlacementUtils.register("mega_oak_placed",
+                    RBTConfigFeatures.MEGA_OAK_SPAWN,
+                    treePlacement(PlacementUtils.countExtra(0, 0.01F, 1)));
+
+    public static final Holder<PlacedFeature> MEGA_ACACIA_PLACED =
+            PlacementUtils.register("mega_acacia_placed",
+                    RBTConfigFeatures.MEGA_ACACIA_SPAWN,
                     treePlacement(PlacementUtils.countExtra(0, 0.01F, 1)));
 }

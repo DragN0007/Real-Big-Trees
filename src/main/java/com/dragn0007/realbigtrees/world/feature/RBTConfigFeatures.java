@@ -13,9 +13,13 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureCo
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.DarkOakFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.DarkOakTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.MegaJungleTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.util.List;
@@ -39,6 +43,38 @@ public class RBTConfigFeatures {
                     new RandomFeatureConfiguration(List.of(
                     new WeightedPlacedFeature(MEGA_BIRCH_CHECKED, 0.1F)), MEGA_BIRCH_CHECKED));
 
+
+    //MEGA OAK
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> MEGA_OAK = FeatureUtils.register("mega_oak",Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.OAK_LOG),
+            new DarkOakTrunkPlacer(8, 2, 1),
+            BlockStateProvider.simple(Blocks.OAK_LEAVES),
+            new DarkOakFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0)),
+            new TwoLayersFeatureSize(1, 1, 2)).decorators(ImmutableList.of(
+            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
+    public static final Holder<PlacedFeature> MEGA_OAK_CHECKED =
+            PlacementUtils.register("mega_oak_checked",
+                    MEGA_OAK, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING));
+    public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> MEGA_OAK_SPAWN =
+            FeatureUtils.register("mega_oak_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfiguration(List.of(
+                            new WeightedPlacedFeature(MEGA_OAK_CHECKED, 0.1F)), MEGA_OAK_CHECKED));
+
+    //MEGA ACACIA
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> MEGA_ACACIA = FeatureUtils.register("mega_acacia",Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+            BlockStateProvider.simple(Blocks.ACACIA_LOG),
+            new MegaJungleTrunkPlacer(9, 3, 10),
+            BlockStateProvider.simple(Blocks.ACACIA_LEAVES),
+            new MegaJungleFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 2),
+            new TwoLayersFeatureSize(1, 1, 2)).decorators(ImmutableList.of(
+            new AlterGroundDecorator(BlockStateProvider.simple(Blocks.PODZOL)))).build());
+    public static final Holder<PlacedFeature> MEGA_ACACIA_CHECKED =
+            PlacementUtils.register("mega_acacia_checked",
+                    MEGA_ACACIA, PlacementUtils.filteredByBlockSurvival(Blocks.ACACIA_SAPLING));
+    public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> MEGA_ACACIA_SPAWN =
+            FeatureUtils.register("mega_acacia_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfiguration(List.of(
+                            new WeightedPlacedFeature(MEGA_ACACIA_CHECKED, 0.1F)), MEGA_ACACIA_CHECKED));
 }
 
 
