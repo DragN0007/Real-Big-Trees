@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="GNU, DragN0007"
+issueTrackerURL="https://discord.gg/jubppqCzXj"
+[[mods]]
+modId="realbigtrees"
+version="${1.18.2-1.0}"
+displayName="Real Big Trees!"
+authors="DragN0007"
+description='''
+Adds "mega" tree variants to all trees.
+
+Our Mod(s) Server & Issues Forum: https://discord.gg/jubppqCzXj
+'''
+[[dependencies.realbigtrees]]
+modId="forge"
+mandatory=true
+versionRange="[40,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.realbigtrees]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.18.2,1.19.0)"
+ordering="NONE"
+side="BOTH"
